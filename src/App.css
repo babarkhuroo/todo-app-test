@@ -1,8 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+  --background: #03045e;
+  --main: #0077b6;
+  --primary: #90e0ef;
+  --text: #caf0f8;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif, serif;
+  color: var(--main);
+}
+
+body {
+  background-color: var(--background);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 500px;
+  background-color: var(--main);
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  overflow-y: scroll;
+}
+
+.todo-list h1 {
+  color: var(--text);
+  margin: 20px 0;
+}
+
+.todo-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.todo-input {
+  flex-basis: 50%;
+  padding: 15px;
+  border-radius: 5px 0 0 5px;
+  border: 2px solid var(--primary);
+  background-color: transparent;
+  color: inherit;
+}
+
+.todo-input::placeholder {
+  color: var(--text);
+}
+
+.todo-input:focus {
+  outline: none;
+  color: var(--text);
+}
+
+.todo-input.edit {
+  color: var(--text);
+  border: 2px solid var(--text);
+}
+
+.todo-button {
+  flex-basis: 20%;
+  padding: 16px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: var(--background);
+  background-color: var(--primary);
+}
+
+.todo-button.edit {
+  background-color: var(--text);
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  background: var(--text);
+  padding: 15px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 24px;
+  cursor: pointer;
 }
