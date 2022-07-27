@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
-  --background: #03045e;
-  --main: #0077b6;
-  --primary: #90e0ef;
-  --text: #caf0f8;
+  --background: #1d3557;
+  --main: #457b9d;
+  --primary: #a8dadc;
+  --text: #f1faee;
 }
 
 * {
@@ -22,7 +22,8 @@ body {
 .todo-list {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 90%;
+  max-width: 500px;
   height: 500px;
   background-color: var(--main);
   text-align: center;
@@ -45,11 +46,11 @@ body {
 
 .todo-input {
   flex-basis: 50%;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px 0 0 5px;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--background);
   background-color: transparent;
-  color: inherit;
+  color: var(--text);
 }
 
 .todo-input::placeholder {
@@ -63,21 +64,23 @@ body {
 
 .todo-input.edit {
   color: var(--text);
-  border: 2px solid var(--text);
+  border: 2px solid var(--primary);
 }
 
 .todo-button {
-  flex-basis: 20%;
-  padding: 16px;
+  flex-basis: 25%;
+  width: max-content;
+  padding: 10px;
   border: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
-  color: var(--background);
-  background-color: var(--primary);
+  color: var(--text);
+  background-color: var(--background);
 }
 
 .todo-button.edit {
-  background-color: var(--text);
+  color: var(--background);
+  background-color: var(--primary);
 }
 
 .todo-row {
